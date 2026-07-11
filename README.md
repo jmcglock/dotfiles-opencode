@@ -4,11 +4,13 @@ My personal [opencode](https://opencode.ai) configuration.
 
 ## What's in here
 
-- **opencode.json** — model, permissions, plugins
-- **opencode.jsonc** — schema-only config (editor validation)
-- **agent/** — custom agents
+- **opencode.json** — model, permissions, plugins, MCP, references
+- **tui.json** — theme
+- **themes/** — custom `jmcglock` theme
+- **agent/** — custom agents (`big-pickle`)
 - **commands/** — slash commands
-- **plugins/** — opencode plugins (caveman, rtk)
+- **skills/** — on-demand skills
+- **plugins/** — local plugins (rtk, caveman, env-protection)
 
 ## How to use
 
@@ -28,13 +30,24 @@ rm -rf ~/.config/opencode/.git
 
 ## Plugins
 
-### rtk
+### npm
 
-Rewrites bash commands via `rtk rewrite` for token savings. Requires [rtk](https://github.com/jmcglock/rtk) in PATH.
+- `opencode-claude-auth` — Claude auth
+- `opencode-notificator` — desktop notifications
+- `opencode-dynamic-context-pruning` — prune stale tool outputs
+- `opencode-wakatime` — time tracking
+- `opencode-type-inject` — inject TS/Svelte types on file reads
 
-### caveman
+### local
 
-Terse mode tracker with slash commands (`/caveman`, `/caveman-commit`, `/caveman-review`).
+- **rtk** — rewrites bash commands via `rtk rewrite` for token savings
+- **caveman** — terse mode tracker + slash commands
+- **env-protection** — blocks reading `.env` files
+
+## MCP
+
+- **context7** — library docs
+- **gh_grep** — search GitHub code examples
 
 ## Customization
 
@@ -48,5 +61,6 @@ Fork this repo and change `opencode.json` to fit your setup. Key fields:
 | `plugin` | Plugins to load |
 | `mcp` | MCP server connections |
 | `agent` | Custom agents |
+| `references` | External repos/dirs for context |
 
 See the [opencode config docs](https://opencode.ai) for the full schema.
