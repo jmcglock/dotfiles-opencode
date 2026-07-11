@@ -8,7 +8,7 @@
     "opencode-type-inject"
   ],
   "model": "xai/grok-4.5",
-  "small_model": "anthropic/claude-sonnet-4-6",
+  "small_model": "opencode/big-pickle",
   "permission": {
     "bash": {
       "*": "allow",
@@ -20,15 +20,15 @@
   "compaction": { "prune": true, "tail_turns": 3 },
   "tool_output": { "max_lines": 800, "max_bytes": 24576 },
   "agent": {
-    "explore": { "model": "anthropic/claude-sonnet-4-6" },
-    "general": { "model": "anthropic/claude-sonnet-4-6" },
-    "compaction": { "model": "anthropic/claude-sonnet-4-6" },
+    "explore": { "model": "opencode/big-pickle" },
+    "general": { "model": "opencode/big-pickle" },
+    "compaction": { "model": "opencode/big-pickle" },
     "title": {
-      "model": "anthropic/claude-sonnet-4-6",
+      "model": "opencode/big-pickle",
       "temperature": 0.2,
       "prompt": "{file:./prompts/title.txt}"
     },
-    "summary": { "model": "anthropic/claude-sonnet-4-6" }
+    "summary": { "model": "opencode/big-pickle" }
   },
   "mcp": {
     "context7": { "type": "remote", "url": "https://mcp.context7.com/mcp" },
