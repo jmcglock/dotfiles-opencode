@@ -18,6 +18,7 @@
     }
   },
   "compaction": { "prune": true, "tail_turns": 3 },
+  "tool_output": { "max_lines": 800, "max_bytes": 24576 },
   "agent": {
     "compaction": { "model": "anthropic/claude-sonnet-4-6" },
     "title": {
