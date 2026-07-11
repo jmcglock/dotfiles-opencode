@@ -20,6 +20,8 @@
   "compaction": { "prune": true, "tail_turns": 3 },
   "tool_output": { "max_lines": 800, "max_bytes": 24576 },
   "agent": {
+    "explore": { "model": "anthropic/claude-sonnet-4-6" },
+    "general": { "model": "anthropic/claude-sonnet-4-6" },
     "compaction": { "model": "anthropic/claude-sonnet-4-6" },
     "title": {
       "model": "anthropic/claude-sonnet-4-6",

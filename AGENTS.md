@@ -20,3 +20,7 @@ Code, commits, PRs, destructive confirmations, security findings: normal English
 - Don't restate file contents after reading — cite path:line.
 - Skip preambles/postambles. Answer first.
 - Tables/lists over paragraphs when comparing options.
+- When spawning subagents, keep the prompt under 300 words.
+- Don't explain what you're about to do — just do it.
+- One code block per answer unless multiple are strictly needed.
+- If a file has >500 lines, grep/read specific sections — don't dump it all.
